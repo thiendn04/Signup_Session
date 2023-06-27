@@ -59,7 +59,7 @@ app.post('/login', (req, res) => {
         if(err) return res.json({Message: "Error inside server"});
         if(data.length > 0) {
             req.session.name = data[0].name;
-            return res. json({Login: true})
+            return res.json({Login: true})
         } else {
             return res.json({Login: false})
         }
